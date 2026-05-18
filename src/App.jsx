@@ -112,19 +112,24 @@ const outlineBtn = {
 };
 
 /* ── LOGO ── */
-const Logo = ({ sm, dark }) => (
-  <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-    <div style={{
-      width: sm ? 30 : 40, height: sm ? 30 : 40,
-      background: `linear-gradient(135deg, ${C.accent} 60%, #8B1A1A)`,
-      borderRadius: 9, display: "flex", alignItems: "center", justifyContent: "center",
-      fontWeight: 900, color: C.white, fontSize: sm ? 14 : 18, fontFamily: font.serif,
-      boxShadow: "0 2px 8px rgba(192,57,43,.28)",
-    }}>K</div>
-    <span style={{
-      fontFamily: font.serif, fontWeight: 700, fontSize: sm ? 17 : 24,
-      color: dark ? C.white : C.dark, letterSpacing: 1.5,
-    }}>Kivenetics</span>
+const Logo = ({ sm }) => (
+  <div
+    style={{
+      display: "flex",
+      alignItems: "center",
+      height: "100%",
+    }}
+  >
+    <img
+      src="/Group 93.png"
+      alt="Kivenetics Logo"
+      style={{
+        height: sm ? 28 : 42, // reduced size
+        width: "auto",
+        objectFit: "contain",
+        display: "block",
+      }}
+    />
   </div>
 );
 
@@ -216,7 +221,7 @@ const SideBtn = ({ icon, label, active, onClick, accentColor }) => (
 function Landing({ onLogin, onSignup }) {
   const [hov, setHov] = useState(null);
   const feats = [
-    { icon: "🩺", t: "Smart Patient Records", d: "AI-powered records that surface what matters, instantly." },
+    
     { icon: "🦽", t: "Advanced Wheelchair", d: "AI-assisted smart wheelchair for mobility, comfort, and intelligent navigation." },
     { icon: "💀", t: "3D Skull Analyzer", d: "Advanced 3D skull imaging and AI-based analysis for precision diagnosis." },
     { icon: "🔒", t: "Secure & Compliant", d: "HIPAA-grade encryption — your data stays yours." },
@@ -226,10 +231,10 @@ function Landing({ onLogin, onSignup }) {
   const team = [
     { n: "Anshuman Singh", r: "CEO & Founder", i: "AS" },
     { n: "Kaustav", r: "CTO", i: "KA" },
-    { n: "Manas Maahir", r: "Head of Operations", i: "MM" },
-    { n: "Jaison Edward", r: "Lead Engineer", i: "JE" },
+   
+    
     { n: "Nidhi P Setty", r: "Head of Research", i: "NS" },
-    { n: "Harsh Mittal", r: "Product Manager", i: "HM" },
+   
     { n: "John Poly", r: "Head of Engineering", i: "JP" },
   ];
   const navLinks = ["About", "Product", "Team", "Contact"];
@@ -239,7 +244,8 @@ function Landing({ onLogin, onSignup }) {
       {/* NAV */}
       <nav style={{
         display: "flex", alignItems: "center", justifyContent: "space-between",
-        padding: "0 64px", height: 68, borderBottom: `1px solid ${C.border}`,
+        padding: "0 48px",
+height: 72, borderBottom: `1px solid ${C.border}`,
         background: "rgba(245,242,236,.92)", backdropFilter: "blur(12px)",
         position: "sticky", top: 0, zIndex: 100,
         boxShadow: "0 1px 0 rgba(0,0,0,.06)",
@@ -308,20 +314,7 @@ function Landing({ onLogin, onSignup }) {
         </div>
       </div>
 
-      {/* STATS BAR */}
-      <div style={{ background: C.dark, padding: "52px 64px" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", gap: 0, justifyContent: "center", flexWrap: "wrap" }}>
-          {[["50K+", "Patients Served"], ["1,200+", "Doctors Onboard"], ["99.9%", "Uptime SLA"], ["4.9★", "App Rating"]].map(([v, l], i) => (
-            <div key={l} style={{
-              textAlign: "center", padding: "0 52px",
-              borderRight: i < 3 ? "1px solid #2C2820" : "none",
-            }}>
-              <div style={{ fontSize: 38, fontWeight: 700, fontFamily: font.serif, color: C.white, lineHeight: 1 }}>{v}</div>
-              <div style={{ fontSize: 11, color: "#7A7060", marginTop: 8, textTransform: "uppercase", letterSpacing: 1.5, fontWeight: 600 }}>{l}</div>
-            </div>
-          ))}
-        </div>
-      </div>
+     
 
       {/* FEATURES */}
       <div id="product" style={{ padding: "88px 64px" }}>
@@ -369,41 +362,81 @@ function Landing({ onLogin, onSignup }) {
         </div>
       </div>
 
-      {/* INSTITUTIONS */}
-      <div style={{ padding: "80px 64px" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", textAlign: "center" }}>
-          <div style={{ fontSize: 11, color: C.muted, letterSpacing: 2, textTransform: "uppercase", marginBottom: 36, fontWeight: 600 }}>Institutes who trust us</div>
-          <div style={{ display: "flex", justifyContent: "center", gap: 18, flexWrap: "wrap", marginBottom: 56 }}>
-            {[["VIT", "Vellore Institute of Technology", "Trusted academic innovation partner"],
-              ["CMC", "Christian Medical College Vellore", "Clinical collaboration support"],
-              ["IIC", "Institution's Innovation Council", "Innovation and ecosystem enablement"],
-            ].map(([a, n, s]) => (
-              <div key={a} style={{
-                background: C.white, border: `1px solid ${C.cardBorder}`, borderRadius: 18,
-                padding: "26px 30px", minWidth: 210, textAlign: "center", boxShadow: C.shadow,
-              }}>
-                <div style={{
-                  width: 54, height: 54, borderRadius: "50%", background: C.bgDark,
-                  border: `2px solid ${C.border}`, display: "flex", alignItems: "center",
-                  justifyContent: "center", margin: "0 auto 14px", fontWeight: 700, color: C.dark, fontSize: 14,
-                  fontFamily: font.serif,
-                }}>{a}</div>
-                <div style={{ fontWeight: 700, color: C.dark, fontSize: 13, marginBottom: 5 }}>{n}</div>
-                <div style={{ fontSize: 12, color: C.muted }}>{s}</div>
-              </div>
-            ))}
+     {/* INSTITUTIONS */}
+<div style={{ padding: "80px 64px" }}>
+  <div style={{ maxWidth: 1200, margin: "0 auto", textAlign: "center" }}>
+    <div style={{
+      fontSize: 11,
+      color: C.muted,
+      letterSpacing: 2,
+      textTransform: "uppercase",
+      marginBottom: 36,
+      fontWeight: 600
+    }}>
+      Institutes who trust us
+    </div>
+
+    <div style={{
+      display: "flex",
+      justifyContent: "center",
+      gap: 18,
+      flexWrap: "wrap"
+    }}>
+      {[
+        ["VIT", "Vellore Institute of Technology", "Trusted academic innovation partner"],
+        ["CMC", "Christian Medical College Vellore", "Clinical collaboration support"],
+        ["IIC", "Institution's Innovation Council", "Innovation and ecosystem enablement"],
+      ].map(([a, n, s]) => (
+        <div
+          key={a}
+          style={{
+            background: C.white,
+            border: `1px solid ${C.cardBorder}`,
+            borderRadius: 18,
+            padding: "26px 30px",
+            minWidth: 210,
+            textAlign: "center",
+            boxShadow: C.shadow,
+          }}
+        >
+          <div style={{
+            width: 54,
+            height: 54,
+            borderRadius: "50%",
+            background: C.bgDark,
+            border: `2px solid ${C.border}`,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            margin: "0 auto 14px",
+            fontWeight: 700,
+            color: C.dark,
+            fontSize: 14,
+            fontFamily: font.serif,
+          }}>
+            {a}
           </div>
-          <div style={{ fontSize: 11, color: C.accent, letterSpacing: 2, textTransform: "uppercase", marginBottom: 20, fontWeight: 700 }}>Backed By</div>
-          <div style={{ display: "flex", justifyContent: "center", gap: 12, flexWrap: "wrap" }}>
-            {["VIL Ventures", "MedTech Capital", "HealthBridge Fund", "IIC VIT"].map(b => (
-              <div key={b} style={{
-                background: C.bgDark, border: `1px solid ${C.border}`, borderRadius: 10,
-                padding: "12px 24px", color: C.muted, fontSize: 14, fontWeight: 600,
-              }}>{b}</div>
-            ))}
+
+          <div style={{
+            fontWeight: 700,
+            color: C.dark,
+            fontSize: 13,
+            marginBottom: 5
+          }}>
+            {n}
+          </div>
+
+          <div style={{
+            fontSize: 12,
+            color: C.muted
+          }}>
+            {s}
           </div>
         </div>
-      </div>
+      ))}
+    </div>
+  </div>
+</div>
 
       {/* TEAM */}
       <div id="team" style={{ padding: "88px 64px", background: C.bgDark, borderTop: `1px solid ${C.border}` }}>

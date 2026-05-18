@@ -1,0 +1,74 @@
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html,body,#root{
+  width:100%;
+  min-height:100vh;
+  background:#EAE5DA;
+}
+
+body{
+  font-family:'Segoe UI',system-ui,sans-serif;
+  color:#2C2820;
+}
+
+input,textarea,button{
+  font-family:inherit;
+}
+
+a{
+  text-decoration:none;
+}
+
+::-webkit-scrollbar{
+  width:6px;
+}
+
+::-webkit-scrollbar-track{
+  background:#EAE5DA;
+}
+
+::-webkit-scrollbar-thumb{
+  background:#C8BFA8;
+  border-radius:3px;
+}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html,body,#root{
+  width:100%;
+  min-height:100vh;
+  background:#EAE5DA;
+}
+
+body{
+  font-family:'Segoe UI',system-ui,sans-serif;
+  color:#2C2820;
+}
+
+input,textarea,button{
+  font-family:inherit;
+}
+
+a{
+  text-decoration:none;
+}
+
+::-webkit-scrollbar{
+  width:6px;
+}
+
+::-webkit-scrollbar-track{
+  background:#EAE5DA;
+}
+
+::-webkit-scrollbar-thumb{
+  background:#C8BFA8;
+  border-radius:3px;
+}
